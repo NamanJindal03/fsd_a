@@ -1,0 +1,12 @@
+body{
+    margin: 10px 50px;
+}
+*{
+    outline: 1px solid red
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    ;
+}

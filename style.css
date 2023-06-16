@@ -1,0 +1,30 @@
+/* Custom CSS */
+*{
+    outline: 1px solid red;
+}
+/* Start of Hero Section */
+#hero-section{
+    background-image: url('https://d19m59y37dris4.cloudfront.net/directory/2-0-2/img/photo/photo-1501621965065-c6e1cf6b53e2.jpg');
+    width: auto;
+    height: 50vh;
+    background-position: center;
+    position: relative;
+}
+
+#hero-content{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    color: white;
+}
+#hero-search{
+    background-color: white;
+    
+}
+/* End of hero Section */
+
+
+/* Bootstrap Altered */
+.nav-link.active, .nav-link.show{
+    color:red;
+}

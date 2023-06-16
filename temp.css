@@ -1,0 +1,32 @@
+/* *{
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px;
+    outline: 2px solid purple;
+}
+
+#div1{
+    width:300px;
+    border: 3px solid red;
+    display: inline-block;
+}
+#div2{
+    border: 3px solid green;
+    width:700px;
+    display: inline-block;
+    margin-left: -4px;
+} */
+
+.light{
+    --font-color: bisque;
+}
+.dark{
+    --font-color: blue;
+}
+
+div{
+    color: var(--font-color);
+    background-size: contain;
+    background-size: cover;
+}

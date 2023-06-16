@@ -1,0 +1,26 @@
+.red1{
+    background-color: red;
+    z-index: 10;
+    left: 200px;
+}
+.red2{
+    background-color: green;
+    position: absolute;
+}
+.red3{
+    background-color: yellow;
+}
+.red4{
+    background-color: orange;
+}
+.box{
+    height: 100px;
+    width: 100px;
+}
+.main{
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    position: relative;
+}

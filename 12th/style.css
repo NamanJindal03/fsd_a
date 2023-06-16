@@ -1,0 +1,50 @@
+/* .container{
+    background-color: red;
+}
+.container2{
+    background-color: green;
+}
+
+@media only print {
+    body{
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+} */
+*{
+    outline: 1px solid red;
+}
+
+img{
+    width: 100%;
+}
+.container{
+    position: relative;
+}
+nav{
+    position: absolute;
+    top: 0px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+/* 
+    absolute, relative
+    fixed
+*/
+
+.bigbox{
+    background-color: red;
+    display: flex;
+    /* align-items: center; */
+    align-items: center;
+    height: 98vh;
+}
+.box{
+    background-color: green;
+    gap: 10px;
+    height: 100px;
+    width: 100px;
+}
