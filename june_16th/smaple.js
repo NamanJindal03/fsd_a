@@ -1,3 +1,11 @@
+/* 
+    TOPICS COVERED
+    -> Local Storage
+    -> For each
+    -> map 
+    
+*/
+
 // let sample = '12323';
 
 // localStorage.setItem('my_key', sample)
