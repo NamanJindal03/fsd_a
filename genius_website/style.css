@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+/*===================== 
+    CSS RESET
+======================= */
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+input{
+    border: 0;
+}
+input:focus{
+    outline: 0;
+}
+
+/*=====================  
+    General Layout
+=======================*/
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(18, 18, 18);
+    --accent-color-one: rgb(255, 255, 100);
+    --accent-color-two: rgb(255, 20, 100);
+    --heading-font-family: 'poppins', sans-serif;
+}
+h2:hover, h3:hover{
+    text-decoration: underline;
+}
+
+section{
+    margin-top: 3rem!important;
+}
+
+/* flex: 1; */
+/* hr{ 
+    background-color: black;
+    height: 3px;
+    flex-grow: 1;
+} */
+.headingHr{
+    align-items: center;
+    gap: 0.5rem;
+}
+.headingHr::after{
+    content: "";
+    background-color: var(--secondary-color);
+    flex-grow: 1;
+    height: 3px;
+}
+
+/*=====================  
+    Utility Classes
+=======================*/
+.flex{
+    display: flex;
+}
+.container{
+    max-width: 1182px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/*=====================  
+    Header
+=======================*/
+header{
+    background-color: var(--accent-color-one);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-family: var(--heading-font-family);
+}
+header img{
+    height: 1.45rem;
+}
+header form{
+    background-color: var(--primary-color);
+    align-items: center;
+    padding: 0px 0.5rem;
+}
+header form input{
+    height: 2rem;
+}
+header form input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+
+.headerButtons{
+    gap: 1rem;
+}
+.headerButtons a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/*=====================  
+   Sub Header
+=======================*/
+.subHeader{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    justify-content: center;
+    padding: 0.6rem 0;
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+}
+.subHeader > * {
+    padding: 0 2rem;
+    border-right: 1px solid var(--primary-color);
+}
+.subHeader :last-child{
+    border-right: none;
+}
+.subHeaderSocials{
+    column-gap: 1rem;
+    align-items: center;
+}
+
+/*=====================  
+   Big News Section
+=======================*/
+.bigNewsSection{
+    gap: 1rem;
+}
+.bigNewsContent{
+    width: 45%;
+}
+
+.bigNewsImageContainer{
+    height: 22rem;
+    width: 55%;
+    background-image: url("https://t2.genius.com/unsafe/902x507/https%3A%2F%2Fimages.genius.com%2F3fde1b8d572100d828324ca616ab36b9.1920x1080x1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+}
