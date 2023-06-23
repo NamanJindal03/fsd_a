@@ -16,6 +16,9 @@ input{
 input:focus{
     outline: 0;
 }
+/* h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+} */
 
 /*=====================  
     General Layout
@@ -41,16 +44,6 @@ section{
     height: 3px;
     flex-grow: 1;
 } */
-.headingHr{
-    align-items: center;
-    gap: 0.5rem;
-}
-.headingHr::after{
-    content: "";
-    background-color: var(--secondary-color);
-    flex-grow: 1;
-    height: 3px;
-}
 
 /*=====================  
     Utility Classes
@@ -63,6 +56,36 @@ section{
     margin: 0 auto;
     padding: 0 2rem;
 }
+.headingHr{
+    align-items: center;
+    gap: 0.5rem;
+}
+.headingHr::after{
+    content: "";
+    background-color: var(--secondary-color);
+    flex-grow: 1;
+    height: 3px;
+}
+.btn{
+    padding: 0.5rem 1.15rem;
+}
+.primaryBtn{
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+.primaryBtn:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.secondaryBtn{
+    background-color: var(--secondary-color);
+    color: var(--primary-color)
+}
+.secondaryBtn:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
 /*=====================  
     Header
 =======================*/
@@ -139,4 +162,110 @@ header form input::placeholder{
     background-position: center;
     background-repeat: no-repeat;
     background-repeat: repeat-x;
+}
+
+/*=====================  
+   Small News Section
+=======================*/
+.smallNews{
+    padding: 0 2rem;
+    position: relative;
+}
+.smallNews h3{
+    margin-bottom: 7rem;
+}
+
+.smallNewsImageContainer{
+    height: 8rem;
+    width: 100%;
+    background-image: url("https://t2.genius.com/unsafe/191x191/https%3A%2F%2Fimages.genius.com%2F9013c841bb8bc36b3bd14dafa9f8f85c.1000x1000x1.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+}
+.smallNews::after{
+    content: '';
+    background-color: black;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right:0px;
+}
+
+/* 
+    before with right as 0px
+
+    after with top:0, right:0
+*/
+
+/*=====================  
+   Chart Section
+=======================*/
+.chartHeader{
+    justify-content: space-between;
+    align-items: center;
+}
+.chartHeader h1{
+    margin: 0px;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+.chartHeaderDropdown{
+    border: 2px solid black;
+    padding: 0.65rem 1.15rem;
+    font-weight: 600;
+}
+
+.chartLeaderboard{
+    font-size: 1.5rem; 
+}
+
+.leaderboardNumberings{
+    gap: 2rem;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.5);
+    height: 5rem;
+    align-items: center;
+}
+.leaderboardNumberings:hover{
+    background-color: rgb(236, 235, 235);
+}
+
+
+.leaderboardNumberWithImage{
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+.leaderboardNumberWithImage img{
+    height: 4rem;
+}
+
+.chartLeaderboard .songName{
+    justify-content: flex-start;
+    width: 35%;
+}
+.chartLeaderboard .songName :first-child{
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chartLeaderboard .artist{
+    width: 30%;
+}
+.chartLeaderboard .songStats{
+    width: 20%;
+    justify-content: flex-end;
+}
+.chartLeaderboard .songStats.fire{
+    justify-content: space-between;
+}
+.chartFooter{
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.temp{
+    height: 500px;
 }
