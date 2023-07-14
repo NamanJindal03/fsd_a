@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <section class="toastGeneratorBox">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="toastSettings">
+            <div>
+                <label for="toastDuration">Duration:</label>
+                <input type="text" name="toastDuration" id="toastDuration" value="3000">
+            </div>
+            <div>
+                <label for="isCancelable">Cancelable</label>
+                <input type="checkbox" name="isCancelable" id="isCancelable">
+            </div>
+            <div>
+                <label for="success">Success</label>
+                <input type="radio" name="toastType" id="success" value="success">
+                <label for="error">Error</label>
+                <input type="radio" name="toastType" id="error" value="error">
+            </div>
+            <button id="addToast">Add Toast</button>
+            <button id="removeAllToast">Remove All Toast</button>
+        </div>
+    </section>
+
+    <div id="toastsContainer">
+        <div class="toast successToast">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <span class="closeToastBtn">X</span>
+        </div>
+        <div class="toast successToast">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="toast successToast">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="toast successToast">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</body>
+</html>

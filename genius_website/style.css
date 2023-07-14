@@ -99,7 +99,7 @@ header{
 header img{
     height: 1.45rem;
 }
-header form{
+.headerForm{
     background-color: var(--primary-color);
     align-items: center;
     padding: 0px 0.5rem;
@@ -120,6 +120,9 @@ header form input::placeholder{
     color: var(--secondary-color);
     font-weight: 600;
 }
+.mobileButtons{
+    display: none;
+}
 
 /*=====================  
    Sub Header
@@ -131,6 +134,7 @@ header form input::placeholder{
     padding: 0.6rem 0;
     font-family: var(--heading-font-family);
     font-weight: 600;
+    text-align: center;
 }
 .subHeader > * {
     padding: 0 2rem;
@@ -192,6 +196,9 @@ header form input::placeholder{
     position: absolute;
     top: 0px;
     right:0px;
+}
+.smallNews:last-child::after{
+    width: 0px;
 }
 
 /* 

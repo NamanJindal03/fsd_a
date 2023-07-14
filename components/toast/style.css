@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+.toastGeneratorBox{
+    display: flex;
+    background-color: rgb(205, 205, 205);
+    padding: 1rem 2rem;
+    width: 38rem;
+    gap: 2rem;
+}
+
+.toastSettings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#toastsContainer{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.toast{
+    width: 200px;
+    height: 80px;
+    color: white;
+    padding: 0.25rem;
+    position: relative;
+}
+.successToast{
+    background-color: green;
+}
+.errorToast{
+    background-color: red;
+}
+.closeToastBtn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
