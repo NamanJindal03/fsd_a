@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(65, 63, 63);
+}
 .toastGeneratorBox{
     display: flex;
     background-color: rgb(205, 205, 205);

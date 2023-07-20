@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- html code goes here -->
+
+    <div id="max-sum-holder">
+        <label for="max-sum">Input max sum:-</label>
+        <input type="number" id="max-sum" value="50" onchange="onChangeMaxSum(event)"> 
+    </div>
+
+    <div id="range-a-holder">
+        <input type="range" id="range-a" min="0" max="0" value="0" onchange="onChangeRangeA(event)">
+        <div id="range-a-value">0</div>
+    </div>
+
+
+    <div id="range-b-holder">
+        <input type="range" id="range-b" min="0" max="50" value="50" onchange="onChangeRangeB(event)">
+        <div id="range-b-value">50</div>
+    </div>
+
+    <div id="sum">50</div>
+</body>
+</html>
