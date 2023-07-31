@@ -389,22 +389,22 @@
 //dom ->
 
 
-const bodyNode = document.body;
-const generateHtmlButton = document.querySelector("#generateHtml")
-const addRandomHtml = () => {
-    const container = document.createDocumentFragment();
-    for(let i =0; i<100; i++){
-        console.log('here')
-        const tempNode = document.createElement('div');
-        tempNode.innerText = i;
-        container.append(tempNode);
-         //it will start generating 
-        //a ui in which we have i=0 displayed on the ui
-    }
-    bodyNode.append(container); //optimizaation happens in ui -> 
-}
+// const bodyNode = document.body;
+// const generateHtmlButton = document.querySelector("#generateHtml")
+// const addRandomHtml = () => {
+//     const container = document.createDocumentFragment();
+//     for(let i =0; i<100; i++){
+//         console.log('here')
+//         const tempNode = document.createElement('div');
+//         tempNode.innerText = i;
+//         container.append(tempNode);
+//          //it will start generating 
+//         //a ui in which we have i=0 displayed on the ui
+//     }
+//     bodyNode.append(container); //optimizaation happens in ui -> 
+// }
 
-generateHtmlButton.addEventListener('click', addRandomHtml); //
+// generateHtmlButton.addEventListener('click', addRandomHtml); //
 
 
 /* 
@@ -412,4 +412,512 @@ generateHtmlButton.addEventListener('click', addRandomHtml); //
         div ->  class = filled -> 0% -> 10% -> blue
         div -> class = empty -> 100% -> 90%
 
+*/
+
+// localStorage.removeItem('')
+// localStorage.clear();
+
+// sessionStorage.removeItem()
+// sessionStorage.clear()
+
+// const abc = {
+//     name: 'naman',
+//     age: 10,
+//     add: '611'
+// }
+
+// const json_obj = '{"name":"naman","age":10,"add":"611"}';
+// console.log(JSON.parse(json_obj));
+
+// JSON.parse({"name":"naman","age":10,"add":"611"})
+
+// localStorage ->
+// sessionStorage ->
+/* 
+
+    these store data(value) in string format -> 
+
+
+*/
+
+/* 
+    toString -> method ->
+
+    join() ->
+
+*/
+// const arr = [10, 20, 30, 40];
+// console.log(arr.toString(',ejfhuewh'));
+// console.log(arr.join(','));
+// console.log(arr.join(' and '));
+
+// const obj =  {
+//     name: 'naman',
+//     age: 10    
+// };
+
+// console.log(obj.join(','));
+/* 
+    we will get an error -> 
+    why??
+    join is a mehtod available to only arrays
+*/
+
+// console.log(obj.toString());
+
+/* w
+    that whever you are working with objects adn localstorage
+    it is compulsory for oyu to have JSON being the part of it 
+*/
+// function createAddition(){
+//     let count = 0;
+//     function increament(){
+//         console.log(++count);
+//         log();
+//     }
+//     function log(){
+//         let message = `Count is ${count}`;
+//         console.log(message); //starts giving ->  Count is 3
+//     }
+//     return [increament, log]
+// }
+
+// const [increament, log] = createAddition();
+// increament();//
+// increament();//
+// increament();//
+// log(); //
+
+
+// function createStack(){
+//     return {
+//         items: [],
+//         push(item){
+//             thi
+//         }
+//     }
+// }
+
+
+// function multiply(num1, num2){
+//     //complete the function 
+//     if(num2 === undefined){
+//         return function(num3){
+//             return num3 * num1;
+//         }
+//     }
+//     return num1 * num2;
+
+// }
+
+
+// multiply(10, 20); //200
+// multiply(4, 4); //16
+// const double = multiply(2); 
+// double(10); //20
+// double(200); //400
+
+//this keyword -> 
+
+// function func(){
+//     console.log(this);
+// }
+// func();
+
+
+/* 
+    the value of this is not dependent on where the function is located
+    it is dependent on how we are calling the function in case of (not arrow functions)
+*/
+
+/* 
+    default binding 
+    implicit binding 
+    explicit binding 
+    new  
+*/
+
+// const obj = {
+//     age: 10,
+//     abcd: function(){
+//         return function(){
+//             console.log(this);
+//         }
+//     },
+// }
+
+// const returnFunc = obj.abcd();
+// returnFunc();
+
+/* 
+    default binding rule says that whenever a function is being called 
+    without a prefix it autoamtically points out to global ->
+    which in case of browser is window
+*/
+/* 
+    implicit binding says that if there is a prefix involved it will point
+    to whosoever called that function
+*/
+
+
+// const obj = {
+//     name: 'naman',
+//     getAge: function() {
+//         const that = this;
+//         function test(){
+//             return that.name;
+//         }
+//         return test;
+//     }
+// }
+// //obj.getAge()()
+// const returnFunc = obj.getAge()
+// console.log(returnFunc());
+
+
+// diff between call bind and apply -> 
+
+// const person = {
+//     age: 20
+// }
+
+// function getAge(numb1, numb2, numb3){
+//     console.log(numb1, numb2, numb3);
+//     // console.log(this);
+//     // console.log(this.age);
+// }
+
+// getAge.call(person, 1,2,3); //immediately invokes
+
+// getAge(1,2,3)
+
+// getAge.apply(person, [1,2,3])
+// // getAge(person);
+
+// const getAgeBindedWithPerson  = getAge.bind(person);
+
+// getAge();
+// getAgeBindedWithPerson();
+// getAgeBindedWithPerson();
+// getAgeBindedWithPerson();
+// function test(){
+//     getAgeBindedWithPerson();
+// }
+// test();
+/* 
+    call vs bind -> 
+
+    call -> immediately invokes the function -> 
+    bind -> it returns a reference to the function which has been binded with the object that we gave
+*/
+
+// function random(){
+//     console.log(arguments);
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     console.log(arguments[2]);
+//     console.log(arguments[3]);
+//     console.log(arguments[4]);
+
+// }
+
+// random(1,2,3,4,56, 6);
+
+/* 
+    Indicating me that I am trying to define a constructor function -> ???
+*/
+// function Person(name, numb){
+//     let random = 10; //sort of acting like a private variable; 
+//     // console.log(this);
+//     // let abcd = 20;
+//     // this.name = 10;
+//     this.name = name;
+//     this.numb = numb * random;
+//     // return 10;
+//     // return this;
+
+//     //setter
+//     this.changeRandom =  function(newRandomValue){
+//         random = newRandomValue;
+//     }
+
+//     //getter -> is used to return private variables
+//     this.returnRandomValue = function(){
+//         return random;
+//     } 
+
+//     /* object -> which is an instrance of that constructor funciton */
+// }
+
+// const person1 = new Person('naman', 10);
+// const person2 = new Person('abcd', 20);
+
+// console.log(person1);
+// const obj = {};
+// console.log(obj.abcd);
+// console.log(obj.times);
+// console.log(person1.returnRandomValue());
+// person1.changeRandom(1000);
+// console.log(person1.returnRandomValue());
+
+
+// /* 
+//     methods -> never ever define them using arrow keyword;
+
+// */
+
+// function Product( name, price, manufacturer){
+
+//     let tax;
+//     this.name = name;
+//     this.price = price;
+//     this.manufacturer = manufacturer;
+
+//     this.getProductDetails = function(){
+//         return `Name: ${this.name}, Price: ${this.price}, Manufacturer: ${this.manufacturer}`
+//     }
+
+//     this.setTax = function(amount){
+//         tax = amount;
+//     }
+//     this.getTax = function(amount){
+//         return tax;
+//     }
+//     // function calculateTotalPrice (){
+//     //     return this.price + this.price*(tax/100)
+//     // }
+//     const calculateTotalPrice = () =>{
+//         console.log(this);
+//         return this.price + this.price*(tax/100)
+//     }
+//     this.getTotalPrice = function (){
+//         return calculateTotalPrice();
+//     }
+//     this.deleteMethod = function (methodName ) {
+//         delete this[methodName];
+//     }
+// }
+
+// const p1 = new Product('name', 'bmw', 'bm');
+// console.log(p1.getTotalPrice())
+
+// function add(a,b,c,d) {
+//     return a+b+c+d; 
+//   }
+//   console.log(add.length);
+  
+// function outer(){
+//     this.age = "outer";
+//     this.innerFunc = function(){
+//         console.log(this.age)
+//     }
+// }
+
+// const outer1 = new outer();
+// const outer2 = new outer();
+
+// outer1.innerFunc();
+// const innerFunc2 = outer2.innerFunc;
+// innerFunc2();
+
+/* 
+    default functions -> value of this is depenedednt on how we are calling that function
+
+    arrow functions -> The value of this is dependent where the function is defined/located -> 
+*/
+
+// console.log('here')
+// function Person(name){
+//     this.name = name;
+//     this.getName = () => this.name
+// }
+
+// const p1 = new Person('a');
+// const p2 = new Person('b');
+// console.log(p1.getName());
+// console.log(p1);
+// const {getName} = p1;
+// console.log(getName());
+
+
+
+// const length2 = 4;
+// function callback(){
+//     console.log(this.length2)
+// }
+// const object = {
+//     length2: 10,
+//     cb2(callback){
+//         callback()
+//     }
+// }
+
+// object.cb2(callback, 1, 2);
+
+//question 2
+// var length = 4;
+// function callback(){
+//     console.log(this.length)
+// }
+// const object = {
+//     length: 10,
+//     cb2(callback){
+//         callback()
+//     }
+// }
+
+// object.cb2(callback, 1, 2);
+
+//question 3
+// var length = 4;
+
+
+// var callback = () => {
+//     console.log(this.length)
+// }
+// const object = {
+//     length: 10,
+//     cb2(callback){
+//         callback() //error
+//     }
+// }
+
+// object.cb2(callback, 1, 2);
+
+
+// const User = (name, age) => {
+
+//     // {} => 
+
+//     this.name = name;
+//     this.age = age;
+
+//     //Person{}
+// }
+// const u1 = new User('naman', 10);
+// console.log(u1);
+
+// const User = (name, age) => {
+//     this.name = name;
+//     this.age = age;
+//     return 10;
+// }
+
+// const u1 = User();
+// console.log(u1);
+
+
+/* 
+    Arrow functions cannot be used as constructors -> 
+*/
+
+// const first_name = 'abcd';
+
+// const usernames = {
+//     first_name_1: 'naman',
+//     getName: function(){
+//         return `first_name is ${this.first_name_1}`
+//     },
+
+//     // setName: (name) => {
+//     //     first_name = name
+//     // }
+    
+// }
+// // usernames.setName('new_name');
+// console.log(usernames.getName()) //first_name is undefiend
+
+
+/* 
+    that you cannot use arrow functions for methods 
+*/
+
+
+//Redis -> database ->
+// {
+//     "name": 'naman',
+//     "age": 
+// }
+
+// Implement Redis -> 
+
+/* 
+    constructor function -> 
+
+    from which I can extract many DB -> 
+
+    instance -> 
+        CRUD -> Create Read Update Delete -> 
+
+
+        db1.appendInRedis() -> my key value pair should be appened
+        db1.deleteInRedis() ->it should be able to delete a key
+        db1.updateInRedis() ->
+        db1.read() -> 
+
+
+        2) there should also be a possibility that if the user provides a time, then that particualr key value pair 
+        should be automatically deleted after that time period
+
+*/
+
+function redisStore(){
+    //private variable => to store data 
+    let database = {};
+    this.appendInRedis = function(key, value, timer){
+        if(database[key]){
+            return;
+        }
+        database[key] = value;
+
+        if(timer){
+            setTimeout(()=>{
+                console.log(`key deleted ${key}`)
+                delete database[key];
+
+                console.log(`updated db is ${JSON.stringify(database)}`)
+            }, timer)
+        }
+    }
+
+    this.updateInRedis = function(key, value){
+        if(!database[key]){
+            return;
+        }
+        database[key] = value;
+    }
+
+    this.readInRedis = function(key){
+        if(!database[key]){
+            return;
+        }
+        return database[key];
+    }
+
+    this.deleteInRedis = function(key){
+        if(!database[key]){
+            return;
+        }
+        delete database[key];
+    }
+}
+
+const db1 = new redisStore();
+const db2 = new redisStore();
+
+db1.appendInRedis('name', 'play', 4000);
+db1.appendInRedis('name2', 'play', 1000);
+db1.appendInRedis('name3', 'play', 2000);
+db1.appendInRedis('name4', 'play', 3000);
+db1.appendInRedis('name5', 'play');
+db1.appendInRedis('name6', 'play6');
+db1.appendInRedis('age', '10');
+
+const name6 = db1.readInRedis('name6');
+console.log(name6);
+// db1.deleteInRedis('name');
+
+
+/* 
+    try to replace the setTImeout with new Date() -> EPOCH -> 
 */
