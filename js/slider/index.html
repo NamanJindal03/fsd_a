@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        width: 400px;
+        height:400px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+    }
+    #container img{
+        width: 100%;
+        height: 100%;
+    }
+    #prev, #next{
+        position: absolute;
+    }
+    #prev{
+        left: 10px;
+        /* top: 190px; */
+        /* top: calc() */
+    }
+    #next{
+        right:10px;
+    }
+    
+</style>
+<script src="./script.js" defer></script>
+<body>
+    <div id="container">
+        <img src="https://picsum.photos/400/400" alt="">
+        <img src="https://picsum.photos/400/401" alt="">
+        <img src="https://picsum.photos/400/402" alt="">
+        <img src="https://picsum.photos/400/403" alt="">
+        <img src="https://picsum.photos/400/404" alt="">
+        <button id="prev">prev</button>
+        <button id="next">next</button>
+    </div>
+
+    <!-- 
+
+
+     -->
+</body>
+</html>
