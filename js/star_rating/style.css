@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+
+}
+body > *{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+}
+
+.fa{
+    font-size: 30px;
+}
+
+.fa-star::before{
+    content: "\f005";
+    color: yellow;
+}
+
+.fa-star-o::before{
+    content: "\f006";
+    color: white;
+}
+
