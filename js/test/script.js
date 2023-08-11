@@ -5,28 +5,29 @@
 
 let prevSearched;
 
-function colorInnerText(node){
+function colorInnerText(node, original, replaceValue){
     console.log('second')
-    node.innerHTML = node.textContent.replace('abcd', 'ichanged');
+    node.innerHTML = node.textContent.replaceAll(original, replaceValue);
     return;
 }
 
-function traverseTree (node){
+function traverseTree (node, original, toBeReplacedWith){
     console.log('first')
     const arrNode = Array.from(node.children);
     if(arrNode.length === 0){
-        colorInnerText(node);
+        colorInnerText(node,original, toBeReplacedWith);
         return;
     }
     for(let child of arrNode){
-        traverseTree(child);
+        traverseTree(child, original, toBeReplacedWith);
     }
 }
 
 const mainDoc = document.body;
 // console.log(mainDoc.children);
 
-traverseTree(mainDoc);
+traverseTree(mainDoc, 'abcd', '<mark> abcd </mark>');
+traverseTree(mainDoc, '<mark> abcd </mark>', 'abcd')
 
 // const mainArr = mainDoc.children
 
