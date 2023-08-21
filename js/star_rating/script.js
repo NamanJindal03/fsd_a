@@ -36,6 +36,7 @@ STAR.prototype.fillColor = function(lastRatedStar){
 }
 
 STAR.prototype.onClick = function(e){
+    console.log(this);
     this.currentRating = e.target.dataset.ratingValue;
     this.fillColor(this.currentRating);
 }
@@ -53,9 +54,17 @@ STAR.prototype.onMouseLeave = function(e){
 }
 
 STAR.prototype.bindEvents = function () {
-    this.parentElement.addEventListener("click", this.onClick.bind(this));
-    this.parentElement.addEventListener("mouseover", this.onMouseOver.bind(this));
-    this.parentElement.addEventListener("mouseleave", this.onMouseLeave.bind(this));
+    // this.parentElement.addEventListener("click", this.onClick.bind(this));
+    // this.parentElement.addEventListener("mouseover", this.onMouseOver.bind(this));
+    // this.parentElement.addEventListener("mouseleave", this.onMouseLeave.bind(this));
+
+    // this.parentElement.addEventListener("click", (e) => this.onClick(e));
+    // this.parentElement.addEventListener("mouseover", (e)=> this.onMouseOver(e));
+    // this.parentElement.addEventListener("mouseleave", (e)=>this.onMouseLeave(e));
+
+    this.parentElement.addEventListener("click", this.onClick);
+    this.parentElement.addEventListener("mouseover", this.onMouseOver);
+    this.parentElement.addEventListener("mouseleave", this.onMouseLeave);
 }
 
 new STAR('#star', STARS);
