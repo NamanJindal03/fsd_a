@@ -6,27 +6,24 @@ import Icon from "./Icon";
 import './tictactoe.css';
 
 
-const itemArray = new Array(9).fill("empty");
+let itemArray = new Array(9).fill("empty");
 function TicTacToe() {
   const [isCross, setIsCross] = useState(false);
   const [message, setMessage] = useState('');
-    // const notify = () => {
-    //     toast("Default Notification !");
-    //     toast.success("Success Notification !", {
-    //         position: toast.POSITION.TOP_CENTER
-    //       });
-    // }
 
   function checkWinner(){
     const currentTurn = isCross ? "cross": "circle";
-    // if(itemArray[0] === currentTurn && 
-    //   itemArray[1] === currentTurn &&
-    //   itemArray[2] === currentTurn 
-    // )
+    let isAnyWinner = false;
+
     if(itemArray[0] === itemArray[1] &&
       itemArray[1] === itemArray[2] &&
       itemArray[0] != 'empty'
     ){
+      isAnyWinner = true;
+    }
+    //TODO: handle other 7 scenarios
+
+    if(isAnyWinner){
       setMessage(`Winner is ${currentTurn}`);
       return;
     }
@@ -48,33 +45,39 @@ function TicTacToe() {
 
   function changeItem(index){
     if(message){
-      //TODO: place toast
+      toast.error("Game Already Finished", {
+        position: toast.POSITION.TOP_CENTER
+      });
       return;
     }
     if(itemArray[index] !== 'empty'){
+      toast.error("Block filled, try other one", {
+        position: toast.POSITION.TOP_CENTER
+      });
       return;
     }
 
     itemArray[index] = isCross ? "cross": "circle";
-    if(checkWinner()){
-      //do some stuff
-    }
+    checkWinner()
     setIsCross(!isCross);
 
   }
 
   function resetTicTacToe(){
-    
+    itemArray = new Array(9).fill("empty");
+    setIsCross(false);
+    setMessage('')
   }
   return (
     <>
+      <ToastContainer />
       <Container className="p-4">
 
         <Row>
           <Col md={6} sm={9} className="offset-md-3 offset-sm-1">
-            <h1>TIC TAC TOE</h1>
+            <h1 className="center-align">TIC TAC TOE</h1>
 
-            <h3>
+            <h3 className="center-align">
               {message 
                 ? message 
                 : isCross ? "Cross's turn" : "Circle's turn"
@@ -101,39 +104,8 @@ function TicTacToe() {
           </Col>
         </Row>
       </Container>
-
-
-        {/* <ToastContainer />
-      <Button onClick={notify}>Bootstrap Btn </Button>
-      <button>normal btn</button>
-      <Card
-        style={{
-          width: "18rem",
-        }}
-      >
-        <img alt="Sample" src="https://picsum.photos/300/200" />
-        <FaBeer />
-        <CardBody>
-          <CardTitle tag="h5">Card title</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-            Card subtitle
-          </CardSubtitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card‘s content.
-          </CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      Copy */}
     </>
   );
 }
 
 export default TicTacToe;
-
-/* 
-    Function -> Atomic -> 
-
-    Driver -> 
-*/
