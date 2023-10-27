@@ -8,10 +8,12 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import "react-toastify/dist/ReactToastify.css";
 import Paint from './Paint'
-import App from './todo/App'
+// import App from './todo/App'
+// import App from './forms/App'
+import Cart from './checkout/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <Cart />
 );
 

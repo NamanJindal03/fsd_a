@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Bluetooth Speaker",
+        "price" : 18.99,
+        "availableCount" : 14
+      },
+      {
+        "id": 2,
+        "name": "Samsung Tab",
+        "price" : 411,
+        "availableCount" : 5
+      },
+      {
+        "id": 3,
+        "name": "Kindle Paperwhite",
+        "price" : 59.99,
+        "availableCount" : 7
+      },
+      {
+        "id": 4,
+        "name": "Sony Headphones",
+        "price" : 329.80,
+        "availableCount" : 3
+      },
+      {
+        "id": 5,
+        "name": "Apple Mac Mini",
+        "price" : 799.99,
+        "availableCount" : 3
+      },
+      {
+        "id": 6,
+        "name": "Legion Laptop",
+        "price" : 1290.99,
+        "availableCount" : 8
+      },
+      {
+        "id": 7,
+        "name": "Dell Latitude",
+        "price" : 1600,
+        "availableCount" : 2
+      }
+    ]
+  }
