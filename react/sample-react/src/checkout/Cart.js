@@ -6,6 +6,7 @@ import {Loader} from './Loader'
 export default function Cart() {
     const [isLoading, setIsLoading] = useState(true);
     const [products, setProducts] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0)
     async function getProductData(){
         // console.log(getProducts());
         const response = await getProducts();
@@ -21,6 +22,7 @@ export default function Cart() {
         // console.log(data);
     }
     function addQty(id){
+        let alteredPrice = 0;
         const updatedProduct = products.map((product)=>{
             if(product.id !== id){
                 return product
@@ -30,11 +32,16 @@ export default function Cart() {
             }
             product.selectedCount++;
             product.total = product.price * product.selectedCount;
+            alteredPrice = product.price;
             return product
         })
         setProducts(updatedProduct);
+        setTotalPrice((prev)=>{
+            return prev + alteredPrice;
+        })
     }
     function reduceQty(id){
+        let alteredPrice = 0;
         const updatedProduct = products.map((product)=>{
             if(product.id !== id){
                 return product
@@ -43,10 +50,14 @@ export default function Cart() {
                 return product;
             }
             product.selectedCount--;
+            alteredPrice = product.price;
             product.total = product.price * product.selectedCount;
             return product
         })
         setProducts(updatedProduct);
+        setTotalPrice((prev)=>{
+            return prev - alteredPrice;
+        })
     }
     useEffect(()=>{
         // getProducts()
@@ -95,7 +106,22 @@ export default function Cart() {
             </tbody>
             }
     </table>
-        
+    {products.length > 0 && 
+        <div>
+            {totalPrice > 1000 && 
+                <div>Discount: {totalPrice/10}</div>
+            }
+            <div>Total Price: {totalPrice > 1000 ? 
+                    <>  
+                    <span style={{textDecoration: 'line-through'}}>{totalPrice}</span>
+                    {totalPrice - (totalPrice/10)}
+                    </>
+                    : 
+                    totalPrice
+                }
+            </div>
+        </div>
+    }
     </>
   )
 }
