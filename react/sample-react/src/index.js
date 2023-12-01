@@ -16,10 +16,12 @@ import Paint from './Paint'
 // import App from './transfer/App'
 // import App from './ref/App'
 // import App from './wrapper/App'
-import App from './context/App'
+// import App from './context/App'
+// import App from './optimisation/App'
+import App2 from  './optimisation/App2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <App2 />
 );
 
