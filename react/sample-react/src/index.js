@@ -18,10 +18,13 @@ import Paint from './Paint'
 // import App from './wrapper/App'
 // import App from './context/App'
 // import App from './optimisation/App'
-import App2 from  './optimisation/App2'
+// import App2 from  './optimisation/App2'
+// import App from './optimization2/App'
+// import App from './authentication/App'
+import App from './searchParamsRouter/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App2 />
+  <App />
 );
 
