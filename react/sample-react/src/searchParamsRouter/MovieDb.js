@@ -16,7 +16,7 @@ export default function MovieDb() {
         const filteredMovies = movieData.filter((movies)=> {return movies.genre == genre});
         // const filteredMovies = movieData.filter((movies)=> console.log(movies.genre));
         console.log(filteredMovies);
-    }, [])
+    }, [searchParams])
   return (
     <>
         {movieGenres.map((category)=>{
