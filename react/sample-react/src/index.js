@@ -21,7 +21,8 @@ import Paint from './Paint'
 // import App2 from  './optimisation/App2'
 // import App from './optimization2/App'
 // import App from './authentication/App'
-import App from './searchParamsRouter/App'
+// import App from './searchParamsRouter/App'
+import App from './hoc/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
